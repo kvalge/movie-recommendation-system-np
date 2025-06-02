@@ -1,5 +1,3 @@
-import os
-
 import numpy as np
 from generate_data import generate_dummy_data
 

@@ -1,3 +1,5 @@
+from pathlib import Path
+
 import numpy as np
 
 def load_data(filename="movie_viewing_data.npz"):
@@ -13,7 +15,10 @@ def load_data(filename="movie_viewing_data.npz"):
             - movies (ndarray): Array of movie titles.
             - ratings (ndarray): 2D array of ratings (shape: [num_users, num_movies]).
     """
-    data = np.load(filename, allow_pickle=True)
+    base_dir = Path(__file__).parent
+    full_path = base_dir / filename
+
+    data = np.load(full_path, allow_pickle=True)
     users = data['users']
     movies = data['movies']
     ratings = data['ratings']
