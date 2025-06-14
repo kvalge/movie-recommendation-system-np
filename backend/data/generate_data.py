@@ -1,7 +1,7 @@
 import numpy as np
 
 
-def generate_dummy_data(num_users=100, num_movies=35, sparsity=0.8, seed=42):
+def generate_dummy_data(num_users=100, num_movies=35, sparsity=0.7, seed=42):
     """
     Generates a synthetic movie rating dataset for testing recommendation systems.
 
@@ -61,13 +61,17 @@ def generate_dummy_data(num_users=100, num_movies=35, sparsity=0.8, seed=42):
     num_movies = min(num_movies, len(movies))
     movies = movies[:num_movies]
 
-    users = np.arange(num_users)
+    users = np.arange(1, num_users + 1)
     ratings = np.zeros((num_users, num_movies), dtype=int)
 
     prob_matrix = np.random.rand(num_users, num_movies)
-    random_scores = np.random.randint(1, 6, size=(num_users, num_movies))  # 1 to 5 inclusive
+    random_scores = np.random.randint(1, 6, size=(num_users, num_movies))
 
     mask = prob_matrix < (1 - sparsity)
     ratings[mask] = random_scores[mask]
 
     return users, movies, ratings
+
+if __name__ == '__main__':
+    generate_dummy_data()
+

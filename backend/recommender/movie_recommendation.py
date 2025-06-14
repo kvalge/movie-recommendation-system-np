@@ -1,4 +1,4 @@
-from data.load_data import load_data
+from backend.data.load_data import load_data
 import numpy as np
 
 

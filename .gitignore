@@ -7,4 +7,4 @@ venv/
 .env
 
 *.log
-/data/movie_viewing_data.npz
+/backend/data/movie_viewing_data.npz
