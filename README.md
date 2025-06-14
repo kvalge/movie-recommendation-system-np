@@ -1,4 +1,4 @@
-# Movie Recommendation System with NumPy and Flask  
+# Movie Recommendation System with NumPy, Flask and Vue.js
 
 The recommendation algorithm suggests movies to a user based on ratings from other users with similar tastes.  
 It works by:  
@@ -17,6 +17,13 @@ Ratings matrix of data consists users as rows and columns as movies, every eleme
 Python 3.11  
 Numpy  
 Flask  
+Vue.js  
+
+## Set Up
+npm create vue@latest  
+npm install  
+npm run dev
+npm install axios  
 
 ### Acknowledgement
 ChatGPT GPT-4o is used for code generation.  
